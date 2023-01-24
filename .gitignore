@@ -1,0 +1,65 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Python template
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+# User-specific stuff
+addons/.idea/**/workspace.xml
+addons/.idea/**/tasks.xml
+addons/.idea/**/usage.statistics.xml
+addons/.idea/**/dictionaries
+addons/.idea/**/shelf
+
+# AWS User-specific
+.idea/**/aws.xml
+
+# Generated files
+.idea/**/contentModel.xml
+
+# Sensitive or high-churn files
+addons/.idea/**/dataSources/
+addons/.idea/**/dataSources.ids
+addons/.idea/**/dataSources.local.xml
+addons/.idea/**/sqlDataSources.xml
+addons/.idea/**/dynamic.xml
+addons/.idea/**/uiDesigner.xml
+addons/.idea/**/dbnavigator.xml
+
+# Gradle
+addons/.idea/**/gradle.xml
+addons/.idea/**/libraries
+
+# Gradle and Maven with auto-import
+# When using Gradle or Maven with auto-import, you should exclude module files,
+# since they will be recreated, and may cause churn.  Uncomment if using
+# auto-import.
+# .idea/artifacts
+# .idea/compiler.xml
+# .idea/jarRepositories.xml
+# .idea/modules.xml
+# .idea/*.iml
+# .idea/modules
+# *.iml
+# *.ipr
+
+
+# mpeltonen/sbt-idea plugin
+addons/.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Cursive Clojure plugin
+addons/.idea/replstate.xml
+
+# SonarLint plugin
+addons/.idea/sonarlint/
+
+# Editor-based Rest Client
+addons/.idea/httpRequests
+
+# Android studio 3.1+ serialized cache file
+addons/.idea/caches/build_file_checksums.ser
