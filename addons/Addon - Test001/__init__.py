@@ -5,7 +5,7 @@ bl_info = {
 }
 
 import bpy
-
+import addon_utils
 class ObjectMoveX(bpy.types.Operator):
     """Ren Object Moving Script"""      # Use this as a tooltip for menu items and buttons.
     bl_idname = "object.move_xss"        # Unique identifier for buttons and menu items to reference.
@@ -28,6 +28,7 @@ def register():
     bpy.utils.register_class(ObjectMoveX)
     bpy.types.VIEW3D_MT_object.append(menu_func)  # Adds the new operator to an existing menu.
 
+    print(addon_utils.paths())
 
 def unregister():
     bpy.utils.unregister_class(ObjectMoveX)
