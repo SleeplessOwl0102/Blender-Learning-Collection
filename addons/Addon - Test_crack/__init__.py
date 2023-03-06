@@ -1,21 +1,15 @@
 bl_info = {
-    "name" : "Cracks And Damage Maker",
-    "author" : "CGblender",
-    "description" : "one click is all you need to create damage or crack in Edge or Face, Cracks and Damage maker is a powerful add-on that's give more control to your 3d work.",
+    "name" : "破损与裂缝",
+    "author" : "LaiYuxiang",
+    "description" : "只需单击一次即可在Edge或Face中创建损坏或裂缝",
     "blender" : (3, 0, 0),
     "version" : (1, 1, 0),
-    "location" : "",
-    "waring" : "",
-    "doc_url": "",
-    "tracker_url": "",
     "category" : "3D View"
 }
-
 
 import bpy
 import bpy.utils.previews
 import os
-
 
 def string_to_int(value):
     if value.isdigit():
@@ -26,6 +20,7 @@ def string_to_icon(value):
     if value in bpy.types.UILayout.bl_rna.functions["prop"].parameters["icon"].enum_items.keys():
         return bpy.types.UILayout.bl_rna.functions["prop"].parameters["icon"].enum_items[value].value
     return string_to_int(value)
+
 
 def icon_to_string(value):
     for icon in bpy.types.UILayout.bl_rna.functions["prop"].parameters["icon"].enum_items:
@@ -50,7 +45,6 @@ def string_to_type(value, to_type, default):
 addon_keymaps = {}
 _icons = None
 cracks_and_damage_maker = {}
-
 
 def property_exists(prop_path):
     try:
@@ -144,16 +138,13 @@ def sna_damage__enum_items(self, context):
 
 
 def register():
-
     global _icons
     _icons = bpy.utils.previews.new()
     bpy.types.Scene.sna_damage_ = bpy.props.EnumProperty(name='Damage ', description='', items=sna_damage__enum_items, update=sna_update_sna_damage__8A609)
 
-
     bpy.utils.register_class(SNA_PT_CRACKS_AND_DAMAGE_MAKER_C30E5)
 
 def unregister():
-
     global _icons
     bpy.utils.previews.remove(_icons)
 
@@ -163,7 +154,6 @@ def unregister():
         km.keymap_items.remove(kmi)
     addon_keymaps.clear()
     del bpy.types.Scene.sna_damage_
-
 
     bpy.utils.unregister_class(SNA_PT_CRACKS_AND_DAMAGE_MAKER_C30E5)
 
